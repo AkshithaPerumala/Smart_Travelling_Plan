@@ -1,16 +1,14 @@
 # 🧭 Smart Travelling Plan – Travel Itinerary Generator
 
-A data-driven Flask web app that generates optimized travel itineraries based on city, duration and category preferences using a dataset of tourist places. It uses KMeans clustering to group nearby attractions and visualizes routes on interactive maps with Folium.
+A data-driven Flask web app that generates optimized travel itineraries based on city, duration, and category preferences using a dataset of tourist places. It uses KMeans clustering to group nearby attractions and visualizes routes on interactive maps with Folium.
 
 ---
 
 ## 🚀 Features
+
 - Recommends top tourist places using real travel dataset (ratings, votes, categories)
-
 - Groups nearby places with KMeans for efficient day-wise planning
-
 - Generates daily itineraries with interactive Folium maps
-
 - Fully responsive UI with dynamic filtering and smooth user flow
 
 ---
@@ -19,30 +17,48 @@ A data-driven Flask web app that generates optimized travel itineraries based on
 
 ### 1. Clone the repository
 ```
-git clone https://github.com/Apoorva-Satakolla/Smart_Travelling_Plan.git
+git clone https://github.com/AkshithaPerumala/Smart_Travelling_Plan.git
 cd Smart_Travelling_Plan
 ```
-### 2. Run the Flask app
+
+### 2. Install required packages
 ```
-python new1.py
+pip install flask pandas scikit-learn folium
 ```
 
-### 3. How It Works
+### 3. Run the Flask app
+```
+python app.py
+```
 
-1. Select a city, preferred categories and number of places per day
+Then open your browser and go to:
 
-2. The app filters and ranks places, then clusters them using KMeans
+```
+http://127.0.0.1:5000/
+```
 
-3. Displays a personalized day-wise plan along with map visualizations
+---
 
+## ⚙️ How It Works
 
+1. Select a city, preferred categories, number of days, and places per day.
+2. The app filters and ranks places based on ratings and votes.
+3. KMeans clustering groups nearby attractions for optimized daily travel.
+4. The system generates a personalized day-wise itinerary with interactive maps.
+
+---
 
 ## 📸 Screenshots
 
-> Enter city name, select categories, specify no. of places per day and no. of days.
-![Travel Itinerary Planner](https://github.com/Apoorva-Satakolla/Smart_Travelling_Plan/blob/cbd6f90b36abbd2a365e7477203c5da04831ec7a/s1.png)
+> Enter city name, select categories, specify number of places per day and number of days.
 
-> List of suggested places with details and location clusters.
-![Day1 Output](https://github.com/Apoorva-Satakolla/Smart_Travelling_Plan/blob/cbd6f90b36abbd2a365e7477203c5da04831ec7a/s2.png)
-![Day2 Output](https://github.com/Apoorva-Satakolla/Smart_Travelling_Plan/blob/cbd6f90b36abbd2a365e7477203c5da04831ec7a/s3.png)
+![Travel Itinerary Planner](https://github.com/AkshithaPerumala/Smart_Travelling_Plan/blob/main/s1.png)
+
+> List of suggested places with details and clustered locations.
+
+![Day1 Output](https://github.com/AkshithaPerumala/Smart_Travelling_Plan/blob/main/s2.png)
+
+![Day2 Output](https://github.com/AkshithaPerumala/Smart_Travelling_Plan/blob/main/s3.png)
+
+---
 
